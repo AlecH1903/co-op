@@ -74,7 +74,11 @@ include_once("code/conexao.php");
 <!-- Navbar -->
 <nav class="navbar navbar-light bg-light shadow-sm mb-4">
    <div class="container d-flex justify-content-between">
-            <a href="#" class="logo">Treedom</a>
+            <?php 
+                if(isset($_SESSION['nome'])){ ?>
+            <a href="inipage.php" class="logo">Treedom</a><?php } else{ ?>
+                <a href="index.html" class="logo">Treedom</a>
+              <?php } ?>
             <a class="navbar-brand" href="#">Minha Árvore Virtual</a>
             <ul class="nav-links">
                 <li><a href="#">Nosso Trabalho</a></li>
